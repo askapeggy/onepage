@@ -23,6 +23,46 @@
             background-color: rgba(1, 108, 230, 0.8);
         }
 
+        .nav-link {
+            font-size: 1rem;
+        }
+
+        .responsive-text {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-link {
+                font-size: 0.875rem;
+            }
+
+            .responsive-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .nav-link {
+                font-size: 0.75rem;
+            }
+
+            .responsive-text {
+                font-size: 0.875rem;
+            }
+        }
+
+        .rounded-custom {
+            border-radius: 1rem;
+            /* 加大導角 */
+        }
+
+        .shadow-custom {
+            box-shadow: 0 0.0rem 1rem rgba(0, 0, 0, 0.5);
+            /* 更明顯的陰影 */
+        }
+
+
+
 
         .box {
             width: 800px;
@@ -129,7 +169,29 @@
     <!-- 導航 -->
     <div class="container">
         <nav class="navbar navbar-expand-sm  navbar-light fixed-top mynavbar">
-            <!-- <div class="container-fluid"> -->
+            <div class="container-fluid">
+                <ul class="navbar-nav d-flex flex-row justify-content-between w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#t1">作者簡介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#to02">劇情大綱</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mydemo_1">海報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#map">地點_影片簡介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Role">角色</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">HOME</a>
@@ -150,12 +212,12 @@
                     <a class="nav-link" href="#Role">角色</a>
                 </li>
             </ul>
-            <!-- </div> -->
+             -->
         </nav>
         <!-- </div> -->
         <!-- 標題 -->
         <br><br>
-        <div class="container-fluid mx-auto">
+        <div class="container-fluid mx-auto" style="text-align: center;">
             <img src="./Images/title4545.png" alt="" class="img-fluid">
             <!-- 
             <div class="titlebox">
@@ -328,16 +390,16 @@
             <br id="map"><br>
             <!--            我是分割線              -->
             <div class="container-fluid">
-                <div class="boxFull">
+                <div class="row">
                     <!-- 我是地圖 -->
-                    <div class="boxFull_c">
+                    <div class="col-md-6">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7667170.558417823!2d134.96551570576955!3d38.35809923551821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2z5pel5pys!5e1!3m2!1szh-TW!2stw!4v1734596711646!5m2!1szh-TW!2stw"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- 我是影片 -->
-                    <div class="boxFull_c">
+                    <div class="col-md-6">
                         <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;"
                             src="https://odysee.com/$/embed/@無臉:1/【海賊王】人人都是尼卡！:0?r=67S7utpXXyQWf9tEJ7F9ciVet5LgmrTK"
                             allowfullscreen></iframe>
@@ -348,155 +410,160 @@
             <br id="Role"><br>
             <!-- 我是腳色 -->
             <audio id="audioElement" src="./sound/sound.mp3"></audio>
-            <div class="container-fluid">
-                <div class="" style="text-align: center; font-size: 36px;">
-                    角色
-                </div>
-                <p>&nbsp;</p>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_01.png" alt="娜美" width="421" height="600" class="image-hover img-fluid"
-                            onclick="playsound(1)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【小賊貓】娜美（奈美）[NAMI]</h3><br>
-                    <h3>特徵：極好的身材，左臂有風車和橘子樣的紋身，愛錢和橘子如命！（提到寶藏的時候眼睛就會變成$ $）</h3>
-                    <h3>武器：完美版天候棒（原為天候棒）</h3>
-                    <h3>特長：繪製地圖，觀測天氣，機敏的身手，處事冷靜極具判斷力，偷東西。
-                        <br>
-                    </h3>
-                </div>
-                <p>&nbsp;</p>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_02.png" alt="路飛" width="353" height="600" class="image-hover  img-fluid"
-                            onclick="playsound(2)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【草帽小子】蒙其·D·路飛（蒙其·D·魯夫）[MONKEY·D·LUFFY]<br></h3>
-                    <br>
-                    <h3> 特徵：天真，戴草帽，戰鬥時草帽拿下來，左眼下方的疤痕（小時候為了證明自己擁有做海賊的勇氣自己劃的）大大的嘴始終展現著燦爛的笑容、好吃、白痴、講義氣。 </h3>
-                    <h3>特長：超人系惡魔果實能力者－橡皮果實！攻擊技能：、橡皮亂打、橡皮子彈、橡皮炸彈、橡皮鞭、橡皮戰斧、橡皮火箭、橡皮火箭炮、橡皮攻城炮、橡皮矛槍、橡皮鐮刀、橡皮鍾、橡皮鎚、橡皮棒、橡皮弩、橡皮網、橡皮風車、橡皮盾、橡皮氣球、橡皮大口吃、橡皮掃把腳、橡皮花火、橡皮印章、橡皮雨、橡皮火山爆發…
-                    </h3>
-                </div>
-                <p>&nbsp;</p>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_03.png" alt="索隆" width="421" height="600" class="image-hover  img-fluid"
-                            onclick="playsound(3)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【海賊獵人】羅羅諾亞·索隆（羅羅諾亞·卓洛）[RORONOA·ZORO]<br></h3>
-                    <br>
-                    <h3>
-                        特徵：綠色頭髮，左耳戴三隻黃色露珠耳環，綠色的腰帶 ，腰帶上佩三把刀，左臂綁著綠色的頭巾（戴上意味著索隆認真作戰，戰鬥力劇增）超級路痴、講義氣 、願為朋友而死。</h3>
-                    <h3>武器：和道一文字、雪走（在逃離司法島時在橋上被海軍本部上校銹銹果實能力者修恩所毀，剩餘的部分便葬恐怖三桅船Thriller Bark上）；三代鬼徹（擁有能讓敵人產生幻覺的「鬼氣」）
-                        ；黑刀秋水（在恐怖三桅船上打敗龍馬所得）。
-                        <br>
-                    </h3>
-                </div>
-                <br>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_04.png" alt="烏索普" width="495" height="600" class="image-hover  img-fluid"
-                            onclick="playsound(4)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【狙擊王】烏索普（騙人布）[USOPP]</h3>
-                    <br>
-                    <h3>愛好：發明各種東西、製造武器</h3>
-                    <h3>特徵：繼承母親的長鼻子，格子頭巾，護目鏡，百寶袋，膽小。</h3>
-                    <h3>特長：吹牛，逃跑，彈弓，射擊，畫畫，做偉大的製作。
-                        <br>
-                    </h3>
-                </div>
-                <p>&nbsp;</p>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_09.png" alt="香吉士 香吉" width="246" height="346"
-                            class="image-hover img-fluid" onclick="playsound(5)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【黑足】山治（香吉士 香吉）[SANJI]</h3>
-                    <br>
-                    <h3> 特徵：黑色西裝；叼著煙；圈圈眉毛；長腿；對美女特別敏感（尤其是娜美，羅賓）；有騎士精神。</h3>
-                    <h3>
-                        特長：做菜一級棒，讓敵人望而卻步的腿功和從未展現過的左眼。其招數「整形踢」可改變人的面部骨骼，使達到整形的效果。在迪巴魯篇中其效果最為明顯。不過此招數通常在極為憤怒的情況下才會使出。</h3>
-                    <br>
-                </div>
-                <br>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_05.png" alt="喬巴" width="414" height="600" class="image-hover img-fluid"
-                            onclick="playsound(6)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【最愛吃棉花糖的寵物】托尼托尼·喬巴（東尼東尼·喬巴）[TonyTony·Chopper]</h3>
-                    <br>
-                    <h3> 特徵：藍鼻子的馴鹿，吃了人人惡魔果實又可以像人一樣說話行走做事（仍可以與動物交流）；非常膽小，碰到事情是總是躲起來，可惜總是躲反（把身子躲到外側）。
-                    </h3>
-                    <h3>特長：醫術，藍波球</h3>
-                </div>
-                <br>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_06.png" alt="妮可·羅賓" width="384" height="600" class="image-hover img-fluid"
-                            onclick="playsound(7)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【惡魔之子】妮可·羅賓（妮歌·魯賓）[NICO·ROBIN]<br></h3>
-                    <br>
-                    <h3> 特徵：喜歡看書，看書時旁邊即使是狂風暴雨也動都不動，有一種神秘的氣質。 黑色長髮、藍黑相間的瞳孔(漫畫為紅色)。 </h3>
-                    <h3>特長：花花果實能力者，能使任何自己看得見的地方像花盛開般長出身體的任何部位（眼睛，手，腳等）；歷史學；暗殺。
-                        <br>
-                    </h3>
-                </div>
-                <br>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_07.png" alt="弗蘭奇" width="466" height="600" class="image-hover img-fluid"
-                            onclick="playsound(8)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【人造人】弗蘭奇（卡特·弗蘭姆、佛朗基）[CUTTER·FRANKY]<br></h3>
-                    <br>
-                    <h3>
-                        特徵：是一個熱衷於穿著三角泳褲的改造人，藍色飛機頭，鋼鐵的身體，黑色三角墨鏡，經常感動的彈吉他和流淚，說話捎帶一點老外調，以可樂為燃料，酷愛可樂。
-                    </h3>
-                    <h3>特長：不光是修船技術高超，還懂建築。除背後渾身上下都是武器（因為自己夠不到後背）。</h3>
-                </div>
-                <br>
-                <div class="overTxt mx-auto mybox">
-                    <div style="text-align: center;">
-                        <img src="./Images/my_08.png" alt="布魯克" width="357" height="497" class="image-hover img-fluid"
-                            onclick="playsound(9)">
-                    </div>
-                    <h3 class="mycolor" style="text-align: center;">【鼻歌】布魯克[BROOK]</h3>
-                    <br>
-                    <h3>愛好：演奏，喝紅茶，說【骷髏冷笑話】，類似於：嚇的我的心臟都在狂跳，雖然我沒有心臟了……</h3>
-                    <h3>特徵：雖然已變成了骷髏，但仍有一頭烏黑濃密的爆炸頭，身穿紳士裝，個性頗好色並搞笑，擁有著「喲嚯嚯嚯」的標誌性笑聲。<br>
-                    </h3>
-                </div>
-                <p>&nbsp;</p>
+        </div>
+        <div class="container-fluid">
+            <div class="" style="text-align: center; font-size: 36px;">
+                角色
             </div>
-
-            <!-- 我是頁尾 -->
-            <div class="container-fluid overTxt mx-auto mybox" style="background-color: aquamarine;">
-                <h4 class="mx-auto" style="text-align: center;">Copyright © 2024 MyGoPen Inc. 保留一切讓你拷貝權利。沒有銷售就沒有退款問題。
-                </h4>
-                <h6 class="mx-auto" style="text-align: center;">如有問題請使用以下管道反映,保證沒有人回應。</h6>
-                <div class="mx-auto" style="text-align: center;">
-                    <a
-                        href="line://ti/g2/KYWBW6E1G0?utm_source=line-openchat-seo&amp;utm_medium=search_keyword&amp;utm_campaign=default">
-                        <img src="./Images/LINE_QRCODE.png" class="image-hover">
-                    </a>
-
-                    <a
-                        href="
-                    https://www.facebook.com/p/%E8%88%AA%E6%B5%B7%E7%8E%8B%E5%88%86%E4%BA%AB%E5%8D%80-100064669270898/">
-                        <img style="width: 92px; height: 94px;" src="./Images/qr.ioi.tw.png" class="image-hover">
-                    </a>
+            <p>&nbsp;</p>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_01.png" alt="娜美" width="421" height="600" class="image-hover img-fluid"
+                        onclick="playsound(1)">
                 </div>
+                <h3 class="mycolor text-center responsive-text">【小賊貓】娜美（奈美）[NAMI]</h3><br>
+                <h3 class="responsive-text">特徵：極好的身材，左臂有風車和橘子樣的紋身，愛錢和橘子如命！（提到寶藏的時候眼睛就會變成$ $）</h3>
+                <h3 class="responsive-text">武器：完美版天候棒（原為天候棒）</h3>
+                <h3 class="responsive-text">特長：繪製地圖，觀測天氣，機敏的身手，處事冷靜極具判斷力，偷東西。
+                    <br>
+                </h3>
+            </div>
+            <p>&nbsp;</p>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_02.png" alt="路飛" width="353" height="600" class="image-hover  img-fluid"
+                        onclick="playsound(2)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【草帽小子】蒙其·D·路飛（蒙其·D·魯夫）[MONKEY·D·LUFFY]<br></h3>
+                <br>
+                <h3 class=" responsive-text">
+                    特徵：天真，戴草帽，戰鬥時草帽拿下來，左眼下方的疤痕（小時候為了證明自己擁有做海賊的勇氣自己劃的）大大的嘴始終展現著燦爛的笑容、好吃、白痴、講義氣。
+                </h3>
+                <h3 class="responsive-text">
+                    特長：超人系惡魔果實能力者－橡皮果實！攻擊技能：、橡皮亂打、橡皮子彈、橡皮炸彈、橡皮鞭、橡皮戰斧、橡皮火箭、橡皮火箭炮、橡皮攻城炮、橡皮矛槍、橡皮鐮刀、橡皮鍾、橡皮鎚、橡皮棒、橡皮弩、橡皮網、橡皮風車、橡皮盾、橡皮氣球、橡皮大口吃、橡皮掃把腳、橡皮花火、橡皮印章、橡皮雨、橡皮火山爆發…
+                </h3>
+            </div>
+            <p>&nbsp;</p>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_03.png" alt="索隆" width="421" height="600" class="image-hover  img-fluid"
+                        onclick="playsound(3)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【海賊獵人】羅羅諾亞·索隆（羅羅諾亞·卓洛）[RORONOA·ZORO]<br></h3>
+                <br>
+                <h3 class="responsive-text">
+                    特徵：綠色頭髮，左耳戴三隻黃色露珠耳環，綠色的腰帶 ，腰帶上佩三把刀，左臂綁著綠色的頭巾（戴上意味著索隆認真作戰，戰鬥力劇增）超級路痴、講義氣 、願為朋友而死。</h3>
+                <h3 class="responsive-text">武器：和道一文字、雪走（在逃離司法島時在橋上被海軍本部上校銹銹果實能力者修恩所毀，剩餘的部分便葬恐怖三桅船Thriller
+                    Bark上）；三代鬼徹（擁有能讓敵人產生幻覺的「鬼氣」）
+                    ；黑刀秋水（在恐怖三桅船上打敗龍馬所得）。
+                    <br>
+                </h3>
+            </div>
+            <br>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_04.png" alt="烏索普" width="495" height="600" class="image-hover  img-fluid"
+                        onclick="playsound(4)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【狙擊王】烏索普（騙人布）[USOPP]</h3>
+                <br>
+                <h3 class="responsive-text">愛好：發明各種東西、製造武器</h3>
+                <h3 class="responsive-text">特徵：繼承母親的長鼻子，格子頭巾，護目鏡，百寶袋，膽小。</h3>
+                <h3 class="responsive-text">特長：吹牛，逃跑，彈弓，射擊，畫畫，做偉大的製作。
+                    <br>
+                </h3>
+            </div>
+            <p>&nbsp;</p>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_09.png" alt="香吉士 香吉" width="246" height="346" class="image-hover img-fluid"
+                        onclick="playsound(5)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【黑足】山治（香吉士 香吉）[SANJI]</h3>
+                <br>
+                <h3 class="responsive-text"> 特徵：黑色西裝；叼著煙；圈圈眉毛；長腿；對美女特別敏感（尤其是娜美，羅賓）；有騎士精神。</h3>
+                <h3 class="responsive-text">
+                    特長：做菜一級棒，讓敵人望而卻步的腿功和從未展現過的左眼。其招數「整形踢」可改變人的面部骨骼，使達到整形的效果。在迪巴魯篇中其效果最為明顯。不過此招數通常在極為憤怒的情況下才會使出。</h3>
+                <br>
+            </div>
+            <br>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_05.png" alt="喬巴" width="414" height="600" class="image-hover img-fluid"
+                        onclick="playsound(6)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【最愛吃棉花糖的寵物】托尼托尼·喬巴（東尼東尼·喬巴）[TonyTony·Chopper]</h3>
+                <br>
+                <h3 class="responsive-text"> 特徵：藍鼻子的馴鹿，吃了人人惡魔果實又可以像人一樣說話行走做事（仍可以與動物交流）；非常膽小，碰到事情是總是躲起來，可惜總是躲反（把身子躲到外側）。
+                </h3>
+                <h3 class="responsive-text">特長：醫術，藍波球</h3>
+            </div>
+            <br>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_06.png" alt="妮可·羅賓" width="384" height="600" class="image-hover img-fluid"
+                        onclick="playsound(7)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【惡魔之子】妮可·羅賓（妮歌·魯賓）[NICO·ROBIN]<br></h3>
+                <br>
+                <h3 class="responsive-text"> 特徵：喜歡看書，看書時旁邊即使是狂風暴雨也動都不動，有一種神秘的氣質。 黑色長髮、藍黑相間的瞳孔(漫畫為紅色)。 </h3>
+                <h3 class="responsive-text">特長：花花果實能力者，能使任何自己看得見的地方像花盛開般長出身體的任何部位（眼睛，手，腳等）；歷史學；暗殺。
+                    <br>
+                </h3>
+            </div>
+            <br>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_07.png" alt="弗蘭奇" width="466" height="600" class="image-hover img-fluid"
+                        onclick="playsound(8)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【人造人】弗蘭奇（卡特·弗蘭姆、佛朗基）[CUTTER·FRANKY]<br></h3>
+                <br>
+                <h3 class="responsive-text">
+                    特徵：是一個熱衷於穿著三角泳褲的改造人，藍色飛機頭，鋼鐵的身體，黑色三角墨鏡，經常感動的彈吉他和流淚，說話捎帶一點老外調，以可樂為燃料，酷愛可樂。
+                </h3>
+                <h3 class="responsive-text">特長：不光是修船技術高超，還懂建築。除背後渾身上下都是武器（因為自己夠不到後背）。</h3>
+            </div>
+            <br>
+            <div class="overTxt mx-auto p-3 border rounded-custom shadow-custom W-100">
+                <div style="text-align: center;">
+                    <img src="./Images/my_08.png" alt="布魯克" width="357" height="497" class="image-hover img-fluid"
+                        onclick="playsound(9)">
+                </div>
+                <h3 class="mycolor text-center responsive-text">【鼻歌】布魯克[BROOK]</h3>
+                <br>
+                <h3 class="responsive-text">愛好：演奏，喝紅茶，說【骷髏冷笑話】，類似於：嚇的我的心臟都在狂跳，雖然我沒有心臟了……</h3>
+                <h3 class="responsive-text">特徵：雖然已變成了骷髏，但仍有一頭烏黑濃密的爆炸頭，身穿紳士裝，個性頗好色並搞笑，擁有著「喲嚯嚯嚯」的標誌性笑聲。<br>
+                </h3>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+
+        <!-- 我是頁尾 -->
+        <div class="container-fluid overTxt mx-auto mybox" style="background-color: aquamarine;">
+            <h4 class="mx-auto" style="text-align: center;">Copyright © 2024 MyGoPen Inc. 保留一切讓你拷貝權利。沒有銷售就沒有退款問題。
+            </h4>
+            <h6 class="mx-auto" style="text-align: center;">如有問題請使用以下管道反映,保證沒有人回應。</h6>
+            <div class="mx-auto" style="text-align: center;">
+                <a
+                    href="line://ti/g2/KYWBW6E1G0?utm_source=line-openchat-seo&amp;utm_medium=search_keyword&amp;utm_campaign=default">
+                    <img src="./Images/LINE_QRCODE.png" class="image-hover">
+                </a>
+
+                <a
+                    href="
+                    https://www.facebook.com/p/%E8%88%AA%E6%B5%B7%E7%8E%8B%E5%88%86%E4%BA%AB%E5%8D%80-100064669270898/">
+                    <img style="width: 92px; height: 94px;" src="./Images/qr.ioi.tw.png" class="image-hover">
+                </a>
             </div>
         </div>
-        <script>
-            function playsound(num) {
-                var audio = document.getElementById("audioElement");
-                audio.play();
-            }
-        </script>
+    </div>
+    <script>
+        function playsound(num) {
+            var audio = document.getElementById("audioElement");
+            audio.play();
+        }
+    </script>
 </body>
 
 </html>
